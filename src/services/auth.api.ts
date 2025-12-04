@@ -3,7 +3,6 @@ import { RegistrationFormData, LoginFormData } from '@/lib/zodSchemas';
 
 export interface User {
   userId: string;
-  fullName: string;
   email: string;
   role: 'STUDENT' | 'ALUMNI';
 }

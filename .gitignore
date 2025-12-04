@@ -22,3 +22,8 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# variables & deploy script
+.env
+.env.production
+ec2_fe_deploy.sh

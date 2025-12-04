@@ -61,7 +61,7 @@ export interface MatchResultResponse {
 
 export const matchApi = {
   createMatchRequest: async (data: MatchRequestFormData): Promise<MatchRequestResponse> => {
-    const response = await api.post('/api/v1/match-request', data);
+    const response = await api.post('/api/v1/match/match-request', data);
     return response.data;
   },
   

@@ -36,7 +36,7 @@ export const Register: React.FC = () => {
       // After successful registration, log in the user
       await authApi.login({
         email: data.email,
-        passwordHash: data.password_hash,
+        passwordHash: data.passwordHash,
       });
       
       await login();
@@ -88,11 +88,11 @@ export const Register: React.FC = () => {
               />
             </FormField>
 
-            <FormField label="Password" error={errors.password_hash?.message} required htmlFor="password">
+            <FormField label="Password" error={errors.passwordHash?.message} required htmlFor="password">
               <Input
                 id="password"
                 type="password"
-                {...register('password_hash')}
+                {...register('passwordHash')}
                 placeholder="••••••••"
                 disabled={isLoading}
               />

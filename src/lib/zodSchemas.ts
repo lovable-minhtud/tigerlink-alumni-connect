@@ -9,7 +9,7 @@ export const registrationSchema = z.object({
     .refine((email) => email.endsWith('@depauw.edu'), {
       message: 'Must be a valid @depauw.edu email',
     }),
-  password_hash: z
+  passwordHash: z
     .string()
     .min(8, 'Password must be at least 8 characters')
     .regex(/^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/, {
